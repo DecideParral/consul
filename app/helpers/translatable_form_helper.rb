@@ -23,7 +23,7 @@ module TranslatableFormHelper
 
       def fields_for_locale(locale, &block)
         fields_for_translation(@translations[locale]) do |translations_form|
-          @template.content_tag :div, translations_options(translations_form.object, locale) do
+          @template.tag.div translations_options(translations_form.object, locale) do
             @template.concat translations_form.hidden_field(
               :_destroy,
               data: { locale: locale }
@@ -94,7 +94,7 @@ module TranslatableFormHelper
     private
       def help_text(text)
         if text
-          content_tag :span, text, class: "help-text"
+          tag.span text, class: "help-text"
         end
       end
   end
