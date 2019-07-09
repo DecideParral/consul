@@ -20,13 +20,16 @@ RSpec.configure do |config|
   config.include(CommonActions)
   config.include(ActiveSupport::Testing::TimeHelpers)
 
+  config.before(:suite) do
+    load Rails.root.join("db", "seeds.rb").to_s
+  end
+
   config.before do |example|
     I18n.locale = :en
     Globalize.locale = I18n.locale
     unless %i[controller system request].include? example.metadata[:type]
       Globalize.set_fallbacks_to_all_available_locales
     end
-    load Rails.root.join("db", "seeds.rb").to_s
     Setting["feature.user.skip_verification"] = nil
   end
 
