@@ -16,9 +16,9 @@
     </div>
 
     <div class="ckeditor small-12 column">
-      <%= f.cktext_area :description,
-                        maxlength: Budget::Investment.description_max_length,
-                        ckeditor: { language: I18n.locale } %>
+      <%= f.text_area :description,
+                      maxlength: Budget::Investment.description_max_length,
+                      class: "rich-editor" %>
     </div>
 
     <div class="small-12 column">

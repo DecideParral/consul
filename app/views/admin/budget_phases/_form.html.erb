@@ -31,9 +31,10 @@
       </span>
 
       <div class="ckeditor">
-        <%= translations_form.cktext_area :description,
-                                           maxlength: Budget::Phase::DESCRIPTION_MAX_LENGTH,
-                                           label: false %>
+        <%= translations_form.text_area :description,
+                                         maxlength: Budget::Phase::DESCRIPTION_MAX_LENGTH,
+                                         class: "rich-editor",
+                                         label: false %>
       </div>
 
       <%= f.label :summary, t("admin.budget_phases.edit.summary") %>
@@ -43,9 +44,10 @@
       </span>
 
       <div class="ckeditor">
-        <%= translations_form.cktext_area :summary,
-                                           maxlength: Budget::Phase::SUMMARY_MAX_LENGTH,
-                                           label: false%>
+        <%= translations_form.text_area :summary,
+                                         maxlength: Budget::Phase::SUMMARY_MAX_LENGTH,
+                                         class: "rich-editor",
+                                         label: false%>
       </div>
     <% end %>
   </div>

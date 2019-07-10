@@ -56,6 +56,7 @@
 //= require checkbox_toggle
 //= require markdown-it
 //= require markdown_editor
+//= require rich_editor
 //= require cocoon
 //= require answers
 //= require questions
@@ -115,6 +116,7 @@ var initialize_modules = function() {
   App.SocialShare.initialize();
   App.CheckboxToggle.initialize();
   App.MarkdownEditor.initialize();
+  App.RichEditor.initialize();
   App.LegislationAdmin.initialize();
   App.LegislationAllegations.initialize();
   App.Legislation.initialize();
