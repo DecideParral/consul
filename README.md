@@ -64,7 +64,7 @@ Run the tests with:
 ```bash
 bin/rspec
 ```
-
+TEST EDIT
 You can use the default admin user from the seeds file:
 
  **user:** admin@consul.dev
