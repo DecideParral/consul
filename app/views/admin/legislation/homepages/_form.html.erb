@@ -12,13 +12,11 @@
 
   <%= f.translatable_fields do |translations_form| %>
     <div class="small-12 column">
-      <div class="ckeditor">
-        <%= translations_form.text_area :homepage,
-                                        language: I18n.locale,
-                                        label: t("admin.legislation.processes.form.homepage"),
-                                        class: "rich-editor admin",
-                                        hint: t("admin.legislation.processes.form.homepage_description") %>
-      </div>
+      <%= translations_form.text_area :homepage,
+                                      language: I18n.locale,
+                                      label: t("admin.legislation.processes.form.homepage"),
+                                      class: "rich-editor admin",
+                                      hint: t("admin.legislation.processes.form.homepage_description") %>
     </div>
   <% end %>
 

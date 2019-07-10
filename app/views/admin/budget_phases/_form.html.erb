@@ -30,12 +30,10 @@
         <%= t("admin.budget_phases.edit.description_help_text") %>
       </span>
 
-      <div class="ckeditor">
-        <%= translations_form.text_area :description,
-                                         maxlength: Budget::Phase::DESCRIPTION_MAX_LENGTH,
-                                         class: "rich-editor",
-                                         label: false %>
-      </div>
+      <%= translations_form.text_area :description,
+                                       maxlength: Budget::Phase::DESCRIPTION_MAX_LENGTH,
+                                       class: "rich-editor",
+                                       label: false %>
 
       <%= f.label :summary, t("admin.budget_phases.edit.summary") %>
 
@@ -43,12 +41,10 @@
         <%= t("admin.budget_phases.edit.summary_help_text") %>
       </span>
 
-      <div class="ckeditor">
-        <%= translations_form.text_area :summary,
-                                         maxlength: Budget::Phase::SUMMARY_MAX_LENGTH,
-                                         class: "rich-editor",
-                                         label: false%>
-      </div>
+      <%= translations_form.text_area :summary,
+                                       maxlength: Budget::Phase::SUMMARY_MAX_LENGTH,
+                                       class: "rich-editor",
+                                       label: false%>
     <% end %>
   </div>
 

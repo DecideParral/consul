@@ -41,9 +41,7 @@
     <%= f.translatable_fields do |translations_form| %>
       <%= translations_form.text_field :title %>
       <%= translations_form.text_field :subtitle %>
-      <div class="ckeditor">
-        <%= translations_form.text_area :content, class: "rich-editor admin" %>
-      </div>
+      <%= translations_form.text_area :content, class: "rich-editor admin" %>
     <% end %>
 
     <div class="small-12 medium-6 large-3 margin-top">

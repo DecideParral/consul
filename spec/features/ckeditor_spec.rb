@@ -8,12 +8,12 @@ describe "CKEditor" do
 
     visit new_debate_path
 
-    expect(page).to have_css "#cke_debate_description"
+    expect(page).to have_css ".cke_textarea_inline[aria-label~='debate_description']"
 
     click_link "Debates"
     click_link "Start a debate"
 
-    expect(page).to have_css "#cke_debate_description"
+    expect(page).to have_css ".cke_textarea_inline[aria-label~='debate_description']"
   end
 
 end
