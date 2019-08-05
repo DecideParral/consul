@@ -84,6 +84,20 @@ Rails.application.configure do
   #   password:             "<password>",
   #   authentication:       "plain",
   #   enable_starttls_auto: true }
+  
+    config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+      :address              => 'mail.hidalgodelparral.gob.mx',
+      :port                 => 587,
+      :domain               => 'hidalgodelparral.gob.mx',
+      :user_name            => 'n@hidalgodelparral.gob.mx',
+      :password             => 'X',
+      :authentication => :plain,
+      :enable_starttls_auto => true,
+      :openssl_verify_mode  => 'none'
+  }
+
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
