@@ -63,6 +63,41 @@ Rails.application.configure do
   config.cache_store = :dalli_store
   config.action_mailer.preview_path = "#{Rails.root}/spec/mailers/previews"
 
+
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+      :address              => 'mail.hidalgodelparral.gob.mx',
+      :port                 => 587,
+      :domain               => 'hidalgodelparral.gob.mx',
+      :user_name            => 'no-replyconsul@hidalgodelparral.gob.mx',
+      :password             => 'Abc1234$',
+      :authentication => :plain,
+      :enable_starttls_auto => true,
+      :openssl_verify_mode  => 'none'
+  }
+
+
+
+
+#  config.action_mailer.delivery_method = :smtp
+#  config.action_mailer.perform_deliveries = true
+#  config.action_mailer.smtp_settings = {
+#      :address              => 'smtp.gmail.com',
+#      :port                 => 587,
+#      :domain               => 'gmail.com',
+#      :user_name            => 'NoReplyConsul@gmail.com',
+#      :password             => 'Consul_13579',
+#      :authentication => :plain,
+#      :enable_starttls_auto => true,
+#      :ssl => false
+#  }
+
+
+
+
+
   config.after_initialize do
     Bullet.enable = true
     Bullet.bullet_logger = true
